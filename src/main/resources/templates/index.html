@@ -1,171 +1,16 @@
-
-
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<meta charset="utf-8" />
-<title>晓晓博客-个人网站-记录生活分享资讯</title>
-<meta name="keywords" content="个人博客，搞笑段子，网页设计，个人网站，晓晓，html5，网站模板，晓晓博客" />
-<meta name="description" content="晓晓博客，一个个人网站，IT技术分享，记录IT生活，提供技术分享和作品分享的个人原创网站" />
-<meta name="author" content="晓晓" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no" />
-<!--CSS-->
-<link rel="shortcut icon" href="images/favicon.ico" />
-
-<!--CSS-->
-<link rel="stylesheet" href="css/default.css"/>
-<link rel="stylesheet" href="css/public.css"/>
-
-<link rel="stylesheet" type="text/css" href="css/skin_1.css" title="qingxin" />
-<link rel="stylesheet" type="text/css" href="css/skin_2.css" title="jianyue" />
-<link rel="stylesheet" type="text/css" href="css/skin_3.css" title="qingshuang" />
-<link rel="stylesheet" href="css/font-icon.css"/>
-<link rel="stylesheet" href="css/flexslider.css"/>
-<link rel="stylesheet" href="css/face.css"/>
-<!--JS-->
-<script src="js/jquery.2.1.4.min.js"></script>
-<script src="js/superbg.min.js"></script>
-<script src="js/superbg-custom.js"></script>
-<script src="js/my.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/album.js"></script>
-<script src="js/tooltip.js"></script>
-<script src="js/face.js"></script>
-<script src="js/layer/layer.js" ></script>
-<script src="js/checkform.js" charset="utf-8"></script>
-<!--[if lte IE 8]>
-	<script>window.location.href='http://cdn.dmeng.net/upgrade-your-browser.html?referrer='+location.href;</script>
-<![endif]-->
-<script type="text/javascript">
-$(function() {
-    $(".flexslider").flexslider({
-		animation: "slide",
-		startAt:"1"
-	});
-});	
-</script>
+<meta charset="UTF-8"/>
 </head>
 <body>
-<!--导航开始-->
-<header>
-	<div class="top">
-		<!--头像左边部分-->
-		<div class="top-left">
-			<div class="logo"><a href="/"><img src="images/logo.gif"/></a></div>
-			<!--滚动消息-->
-			<div class="web-xiaoxi">
-				<i class="el-speaker"></i>
-				<ul class="mulitline">
-					<li>正在最后的优化正在最后的优化正在最后的优化</li>
-					<li>完成后将放出模板</li>
-					<li>完美自适应手机</li>
-				</ul>
-			</div>
-			<!--END 消息 -->
-			<!--手机菜单按钮-->
-			<div class="mobile-nav"><i class="el-lines"></i><i class="el-remove"></i></div>
-		</div>
-		<!--电脑导航开始-->
-		<nav>
-			<ul class="orange-text">
-				<li class=""><a href="/">首页</a></li>
-				<li><a href="/About/" >关于</a></li>
-				<li><a href="/Shuo/" >说说</a></li>
-				<li class='drop' >
-					<a href="JavaScript:;" >分类<i class='el-chevron-down'></i></a>
-					<div class="drop-nav orange-text ">
-						<ul>
-							<li><a href="/List/?1+1.html" >生活哲理</a></li>
-							<li><a href="/List/?2+1.html" >程序交流</a></li>
-							<li><a href="/List/?3+1.html" >关于游戏</a></li>
-							<li><a href="/List/?7+1.html" >趣闻杂谈</a></li>
-							<li><a href="/List/?5+1.html" >一场旅行</a></li>
-						</ul>
-					</div>
-				</li>
-				<li>
-					<a href="/Links/" >链接</a>
-				</li>
-				<li  >
-					<a href="/Album/" >相册</a>
-				</li>
-				<li  >
-					<a href="/Downlist/" >素材</a>
-				</li>
-				<li  >
-					<a href="/FeedBack/" >留言</a>
-				</li>
-			</ul>
-		</nav>
-		<!--电脑导航结束-->
-		<!--这里是手机导航-->
-		<div class="mob-menu">
-			<!--手机顶部搜索-->
-			<div class="search ">
-				<form action="/Search/" method="get">
-					<div class="search-index">
-						<input name="s" type="text"  placeholder="请输入关键字" onfocus="this.placeholder=''" onblur="this.placeholder='请输入关键字'"/>
-						<i class="el-search"><input value="" type="submit"/></i>
-					</div>
-				</form>
-			</div>
-			<!--手机下拉菜单-->
-			<ul>
-				<li><a href="/">首页</a></li>
-				<li >
-					<a href="/About/">关于</a>
-				</li>
-				<li >
-					<a href="/Shuo/">说说</a>
-				</li>
-				<li class='mob-drop' >
-					<a href="javascrip:;">分类<i></i></a>
-					<ul class="mob-dropmenu">
-						<li><a href="/List/?1+1.html" >生活哲理</a></li>
-						<li><a href="/List/?2+1.html" >程序交流</a></li>
-						<li><a href="/List/?3+1.html" >关于游戏</a></li>
-						<li><a href="/List/?7+1.html" >趣闻杂谈</a></li>
-						<li><a href="/List/?5+1.html" >一场旅行</a></li>
-					</ul>
-				</li>
-				<li >
-					<a href="/Links/">链接</a>
-				</li>
-				<li >
-					<a href="/Album/">相册</a>
-				</li>
-				<li >
-					<a href="/Downlist/">素材</a>
-				</li>
-				<li >
-					<a href="/FeedBack/">留言</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<!-- 换肤 -->
-	<script src="js/skin.js"></script>
-	<div class="select-skin">
-		<div class="skin-btn">
-	    	<a href="javascript:void(0);" class="skin-btn-open">换<br/>肤</a>
-		</div>
-		<div class="skin-content">
-		    <h1>选择风格<span class="skin-close">关闭</span></h1>
-		    <div class="skin-content-list">
-		        <div class="skin-list"><a href="#" onclick="setActiveStyleSheet('qingxin'); return false;" class="btn1">清新</a></div>
-		        <div class="skin-list"><a href="#" onclick="setActiveStyleSheet('jianyue'); return false;" class="btn2">简约</a></div>
-				<div class="skin-list"><a href="#" onclick="setActiveStyleSheet('qingshuang'); return false;" class="btn3">清爽</a></div>
-		    </div>
-		</div>	
-	</div>
-</header>
-<!--导航结束-->
-
+<div th:replace="~{fragments/header :: header}"></div>
 <!--主题框架开始-->
 <div class="container">
 <!--左侧开始-->
 	<section>
-	<!-- 大轮播开始 -->
+		<!-- 大轮播开始 -->
 		<div class="flexslider">
 			<ul class="slides">
 				<li>
@@ -396,7 +241,6 @@ $(function() {
 						<li><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a></li>
 						<li><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></li>
 					</ul>
-					 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script> 
 				</div>
 		</div>
 		<!--最新更新-->
@@ -707,13 +551,7 @@ $(function() {
 		</div>
 	</div>
 	<!--底部导航-->
-	<div class="foot-nav">
-		<div class="copy-right"><span >CopyRight &#169; 2015-2016 晓晓博客 &#160;&#160;&#160; Design by 晓晓</span></div>
-		<div class="bottom-nav">
-			<span><a href="Map/Sitemap.html" target="_blank">百度地图</a>-<a href="Map/Sitemap.xml" target="_blank">谷歌地图</a>-<a><script src="" language="JavaScript"></script></a>-<a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action"> 浙ICP备16003960号</a></span>
-		</div>
-	</div>
-	<div  id="toTop">Back to Top</div>
+	<div th:replace="~{fragments/footer :: footer}"></div>
 	<script>   
 	    // 替换
 	    document.body.innerHTML = document.body.innerHTML.replace(/\[Q([0-9]*)\]/g, "<img src='images/face/mr/$1.gif'/>");
@@ -722,5 +560,7 @@ $(function() {
 	</script>
 		
 </footer>
+
+
 </body>
 </html>

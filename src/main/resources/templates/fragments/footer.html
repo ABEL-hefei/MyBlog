@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8"/>
+</head>
+<body>
+<div th:fragment="footer">
+	<!--底部导航-->
+	<div class="foot-nav">
+		<div class="copy-right"><span >CopyRight &#169; 2015-2016 晓晓博客 &#160;&#160;&#160; Design by 晓晓</span></div>
+		<div class="bottom-nav">
+			<span><a href="Map/Sitemap.html" target="_blank">百度地图</a>-<a href="Map/Sitemap.xml" target="_blank">谷歌地图</a>-<a><script src="" language="JavaScript"></script></a>-<a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action"> 浙ICP备16003960号</a></span>
+		</div>
+	</div>
+	<div  id="toTop">Back to Top</div>
+	
+	<!--JS-->
+	<script src="../../js/jquery.2.1.4.min.js" th:src="@{/js/jquery.2.1.4.min.js}"></script>
+	<script src="../../js/superbg.min.js" th:src="@{/js/superbg.min.js}"></script>
+	<script src="../../js/superbg-custom.js" th:src="@{/js/superbg-custom.js}"></script>
+	<script src="../../js/my.js" th:src="@{/js/my.js}"></script>
+	<script src="../../js/jquery.flexslider-min.js" th:src="@{/js/jquery.flexslider-min.js}"></script>
+	<script src="../../js/album.js" th:src="@{/js/album.js}"></script>
+	<script src="../../js/tooltip.js" th:src="@{/js/tooltip.js}"></script>
+	<script src="../../js/face.js" th:src="@{/js/face.js}"></script>
+	<script src="../../js/layer/layer.js" th:src="@{/js/layer/layer.js}"></script>
+	<script src="../../js/checkform.js" th:src="@{/js/checkform.js}" charset="utf-8"></script>
+	<!--[if lte IE 8]>
+		<script>window.location.href='http://cdn.dmeng.net/upgrade-your-browser.html?referrer='+location.href;</script>
+	<![endif]-->
+	<script type="text/javascript">
+		$(function() {
+		    $(".flexslider").flexslider({
+				animation: "slide",
+				startAt:"1"
+			});
+		});	
+	</script>
+</body>
+</html>

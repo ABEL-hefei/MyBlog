@@ -21,4 +21,25 @@ public class MainController {
 		return "index";
 	}
 	
+	@GetMapping("/message")
+	public String message() {
+		return "message";
+	}
+	
+	@GetMapping("/shuoList")
+	public String shuoList() {
+		return "shuoList";
+	}
+	
+	@GetMapping("/about")
+	public String about() {
+		return "about";
+	}
+	
+	@GetMapping("/album")
+	public String album() {
+		return "album";
+	}
+	
+	
 }

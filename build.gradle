@@ -2,6 +2,11 @@ buildscript {
 	ext {
 		springBootVersion = '1.5.8.RELEASE'
 	}
+	
+	// 自定义  Thymeleaf 和 Thymeleaf Layout Dialect 的版本
+	ext['thymeleaf.version'] = '3.0.3.RELEASE'
+	ext['thymeleaf-layout-dialect.version'] = '2.2.0'
+	
 	repositories {
 		mavenCentral()
 	}

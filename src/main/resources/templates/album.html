@@ -7,35 +7,9 @@
 <title>相册 - 晓晓博客</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<meta  charset="gb2312" />
+<meta  charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="images/favicon.ico" />
-
-<!--CSS-->
-<link rel="stylesheet" href="css/default.css"/>
-<link rel="stylesheet" href="css/public.css"/>
-
-<link rel="stylesheet" type="text/css"href="css/skin_1.css"title="qingxin" />
-<link rel="stylesheet" type="text/css" href="css/skin_2.css"title="jianyue" />
-<link rel="stylesheet" type="text/css" href="css/skin_3.css"title="qingshuang" />
-<link rel="stylesheet" href="css/font-icon.css"/>
-<link rel="stylesheet" href="css/flexslider.css"/>
-<link rel="stylesheet" href="css/face.css"/>
-<!--JS-->
-<script src="js/jquery.2.1.4.min.js"></script>
-<script src="js/superbg.min.js"></script>
-<script src="js/superbg-custom.js"></script>
-<script src="js/my.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/album.js"></script>
-<script src="js/tooltip.js"></script>
-<script src="js/face.js"></script>
-<script src="js/layer/layer.js" ></script>
-<script src="js/checkform.js" charset="gb2312"></script>
-<!--[if lte IE 8]>
-	<script>window.location.href='http://cdn.dmeng.net/upgrade-your-browser.html?referrer='+location.href;</script>
-<![endif]-->
-
 
 <script>
 $(function(){
@@ -56,182 +30,8 @@ $(function(){
 </head>
 
 <body>
- <!--导航开始-->
-
-<header>
-	<div class="top">
-		<!--头像左边部分-->
-		<div class="top-left">
-		  <div class="logo"><a href="/"><img src="images/logo.gif"/></a></div>
-			
-				
-			
-				<!--滚动消息-->
-			<div class="web-xiaoxi">
-				<i class="el-speaker"></i>
-				<ul class="mulitline">
-					
-					<li>正在最后的优化正在最后的优化正在最后的优化</li>
-					<li>完成后将放出模板</li>
-					<li>完美自适应手机</li>
-				</ul>
-			</div>
-				<!--END 消息 -->
-			
-			<!--手机菜单按钮-->
-			<div class="mobile-nav"><i class="el-lines"></i><i class="el-remove"></i></div>
-		</div>
-	<!--电脑导航开始-->
-		<nav>
-			<ul class="orange-text">
-				<li class=""><a href="/">首页</a></li>
-
-
-				<li  >
-					<a href="/About/" >关于</a>
-					
-				</li>
-
-
-				<li  >
-					<a href="/Shuo/" >说说</a>
-					
-				</li>
-
-
-				<li class='drop'  >
-					<a href="JavaScript:;" >分类<i class='el-chevron-down'></i></a>
-					 
-                    
-					<div class="drop-nav orange-text ">
-						<ul>
-	
-							<li><a href="/List/?1+1.html" >生活哲理</a></li>
-	
-							<li><a href="/List/?2+1.html" >程序交流</a></li>
-	
-							<li><a href="/List/?3+1.html" >关于游戏</a></li>
-	
-							<li><a href="/List/?7+1.html" >趣闻杂谈</a></li>
-	
-							<li><a href="/List/?5+1.html" >一场旅行</a></li>
-	
-						</ul>
-					</div>
-                    
-				</li>
-
-
-				<li  >
-					<a href="/Links/" >链接</a>
-					
-				</li>
-
-
-				<li  >
-					<a href="/Album/" >相册</a>
-					
-				</li>
-
-
-				<li  >
-					<a href="/Downlist/" >素材</a>
-					
-				</li>
-
-
-				<li  >
-					<a href="/FeedBack/" >留言</a>
-					
-				</li>
-
-			</ul>
-		</nav>
-		
-		<!--这里是手机导航-->
-		<div class="mob-menu">
-		<!--手机顶部搜索-->
-			<div class="search ">
-				<form action="/Search/" method="get">
-					<div class="search-index">
-						<input name="s" type="text"  placeholder="请输入关键字" onfocus="this.placeholder=''" onblur="this.placeholder='请输入关键字'"/>
-						<i class="el-search"><input value=" "type="submit"/></i>
-					</div>
-				</form>
-			</div>
-			<!--手机下拉菜单-->
-			<ul>
-				<li><a href="/">首页</a></li>
-	
-				<li >
-					<a href="/About/">关于</a>
-					
-					</li>
-	
-				<li >
-					<a href="/Shuo/">说说</a>
-					
-					</li>
-	
-				<li class='mob-drop' >
-					<a href="javascrip:;">分类<i></i></a>
-					 
-					<ul class="mob-dropmenu">
-	
-							<li><a href="/List/?1+1.html" >生活哲理</a></li>
-	
-							<li><a href="/List/?2+1.html" >程序交流</a></li>
-	
-							<li><a href="/List/?3+1.html" >关于游戏</a></li>
-	
-							<li><a href="/List/?7+1.html" >趣闻杂谈</a></li>
-	
-							<li><a href="/List/?5+1.html" >一场旅行</a></li>
-	
-						</ul>
-						
-					</li>
-	
-				<li >
-					<a href="/Links/">链接</a>
-					
-					</li>
-	
-				<li >
-					<a href="/Album/">相册</a>
-					
-					</li>
-	
-				<li >
-					<a href="/Downlist/">素材</a>
-					
-					</li>
-	
-				<li >
-					<a href="/FeedBack/">留言</a>
-					
-					</li>
-	
-				</ul>
-			</div>
-	</div>
-<!--换肤--->
-<script src="js/skin.js"></script>
-<div class="select-skin">
-<div class="skin-btn">
-    <a href="javascript:void(0);" class="skin-btn-open">换<br>肤</a>
-</div>
-
-<div class="skin-content">
-    <h1>选择风格<span class="skin-close">关闭</span></h1>
-    <div class="skin-content-list">
-        <div class="skin-list"><a href="#" onclick="setActiveStyleSheet('qingxin'); return false;" class="btn1">清新</a></div>
-        <div class="skin-list"><a href="#" onclick="setActiveStyleSheet('jianyue'); return false;" class="btn2">简约</a></div>
-		 <div class="skin-list"><a href="#" onclick="setActiveStyleSheet('qingshuang'); return false;" class="btn3">清爽</a></div>
-    </div>
-</div>	
-</div>
-</header>
+<!--导航开始-->
+<div th:replace="~{fragments/header :: header}"></div>
 <!--导航结束-->
 
 
@@ -558,19 +358,13 @@ $(function(){
 
 	</div>
 	<!--底部导航-->
-	<div class="foot-nav">
-		<div class="copy-right"><span >CopyRight &#169; 2015-2016 晓晓博客 &#160;&#160;&#160;     Design by 晓晓</span></div>
-		<div class="bottom-nav">
-			<span><a href="Map/Sitemap.html" target="_blank">百度地图</a>-<a href="Map/Sitemap.xml" target="_blank">谷歌地图</a>-<a><script src="http://s11.cnzz.com/z_stat.php?id=1256669742&web_id=1256669742" language="JavaScript"></script></a>-<a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action"> 浙ICP备16003960号</a></span>
-		</div>
-	</div>
-<div  id="toTop">Back to Top</div>
-<script>   
-    // 替换
-    document.body.innerHTML = document.body.innerHTML.replace(/\[Q([0-9]*)\]/g, "<img src='images/face/mr/$1.gif'/>");
-    document.body.innerHTML = document.body.innerHTML.replace(/\[yc_([0-9]*)\]/g,"<img src='images/face/yc/$1.gif'/>");
-    document.body.innerHTML = document.body.innerHTML.replace(/\[ali_([0-9]*)\]/g,"<img src='images/face/ali/$1.gif'/>");
-</script>
+	<div th:replace="~{fragments/footer :: footer}"></div>
+	<script>   
+	    // 替换
+	    document.body.innerHTML = document.body.innerHTML.replace(/\[Q([0-9]*)\]/g, "<img src='images/face/mr/$1.gif'/>");
+	    document.body.innerHTML = document.body.innerHTML.replace(/\[yc_([0-9]*)\]/g,"<img src='images/face/yc/$1.gif'/>");
+	    document.body.innerHTML = document.body.innerHTML.replace(/\[ali_([0-9]*)\]/g,"<img src='images/face/ali/$1.gif'/>");
+	</script>
 
 
 </footer>
