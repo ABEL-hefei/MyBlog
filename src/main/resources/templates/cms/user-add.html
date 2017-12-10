@@ -1,0 +1,51 @@
+  <div class="modal-dialog" role="document" style="max-width:450px;">
+    <!-- <form id="addUserForm" action="/user/add" th:action="@{~/user/addUserForm}" th:object="${userModel.user}" method="post" autocomplete="off" draggable="false"> -->
+    <form id="addUserForm" action="/user/add" th:action="@{~/user/addUserForm}" th:object="${userModel.user}" method="post" autocomplete="off" draggable="false">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" >增加用户</h4>
+        </div>
+        <div class="modal-body">
+          <table class="table" style="margin-bottom:0px;">
+            <thead>
+              <tr> </tr>
+            </thead>
+            <tbody>
+           	  <tr  style="display:none">
+                <td wdith="20%">ID:</td>
+                <td width="80%"><input type="text" value=""  th:value="*{id}" class="form-control" name="id" maxlength="10" autocomplete="off" /></td>
+              </tr>
+              <tr>
+                <td wdith="20%">姓名:</td>
+                <td width="80%"><input type="text" value="" th:value="*{name}" class="form-control" name="name" maxlength="10" autocomplete="off" /></td>
+              </tr>
+              <tr>
+                <td wdith="20%">用户名:</td>
+                <td width="80%"><input type="text" value="" th:value="*{username}" class="form-control" name="username" maxlength="10" autocomplete="off" /></td>
+              </tr>
+              <tr>
+                <td wdith="20%">邮箱:</td>
+                <td width="80%"><input type="text" value="" th:value="*{email}" class="form-control" name="email" maxlength="13" autocomplete="off" /></td>
+              </tr>
+              <tr>
+                <td wdith="20%">新密码:</td>
+                <td width="80%"><input type="password" th:value="*{password}" class="form-control" name="password" maxlength="18" autocomplete="off" /></td>
+              </tr>
+              <tr>
+                <td wdith="20%">确认密码:</td>
+                <td width="80%"><input type="password" class="form-control" name="new_password" maxlength="18" autocomplete="off" /></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr></tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="submit" class="btn btn-primary" id="submitAddUser">提交</button>
+        </div>
+      </div>
+    </form>
+  </div>

@@ -12,7 +12,7 @@ public class Article {
 	private String title;
 	
 	/**
-	 * 文章标题
+	 * 文章摘要
 	 */
 	private String summary;
 
