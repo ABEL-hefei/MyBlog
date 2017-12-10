@@ -1,19 +1,40 @@
 //页面加载完执行的动作
+$(function(){
 	//获取用户列表
-	getUserList();
+	$("#aside").on("click","#userList",function (){
+		getUserList();
+	});
+	
 	//点击添加用户获取页面
 	getAddUser();
 	//获取修改用户页面
 	getEditUser();
-	//点解添加用户提交
-	submitAddUser();
-	//点击编辑用户提交
-	submitEditUser();
+	//点击添加用户提交
 	
+	/**
+	 * 提交添加用户中的表单
+	 * @returns
+	 */
+	$("#addUser").delegate("#submitAndUser", "click",function (){
+	// 模态框id 				点击事件的id
+		submitAddUser();
+		//关闭模态框
+        $('#addUser').modal('hide');
+	});
 	
-$("#aaa").click(function(){
-	alert(2345);
+	/**
+	 * 提交编辑用户表单
+	 * @returns
+	 */
+	$("#addUser").delegate("#submitEditUser", "click",function (){
+		submitEditUser();
+		//关闭模态框
+        $('#addUser').modal('hide');
+	});
+	
 });
+
+
 
 /**
  * 获取用户列表
@@ -22,24 +43,22 @@ $("#aaa").click(function(){
  */
 function getUserList(){
 	//在左侧功能键加载完成后点击用户管理执行的动作
-	$("#aside").on("click","#userList",function (){ 
-		$.ajax({ 
-	        url: "/user/userList", 
-	        contentType : 'application/json',
-	        data:{
+	$.ajax({ 
+        url: "/user/userList", 
+        contentType : 'application/json',
+        data:{
 //	            "async":true, 
 //	            "pageIndex":pageIndex,
 //	            "pageSize":pageSize,
 //	            "name":$("#searchName").val()
-	        },
-	        success: function(data){
-	            $("#main").html(data);
-	        },
-	        error : function() {
-	            toastr.error("error!");
-	        }
-	    });
-	});
+        },
+        success: function(data){
+            $("#main").html(data);
+        },
+        error : function() {
+            toastr.error("error!");
+        }
+    });
 }
 
 /**
@@ -86,115 +105,52 @@ function getEditUser(){
 }
 
 /**
- * 新增和修改点击提交
+ * 新增用户点击提交
  */
 function submitAddUser(){
 	// 提交变更后，清空表单
-    $("#submitAddUser").click(function() {
-        $.ajax({ 
-             url: "/user/addUserForm", 
-             type: 'POST',
-             data:$('#addUserForm').serialize(),
-             success: function(data){
-                 $('#addUserForm')[0].reset();  
-                 if (data.success) {
-                     // 从新刷新主界面
-                     getUersByName(0, _pageSize);
-                 } else {
-                     toastr.error(data.message);
-                 }
-
-             },
-             error : function() {
-                 toastr.error("error!");
+    $.ajax({ 
+         url: "/user/addUserForm", 
+         type: 'POST',
+         data:$('#addUserForm').serialize(),
+         success: function(data){
+             if (data.result) {
+                 // 从新刷新主界面
+            	 getUserList();
+             } else {
+                 toastr.error(data.message);
              }
-         });
-    });
+
+         },
+         error : function() {
+             toastr.error("error!");
+         }
+//         //关闭模态框
+//         $('#addUser').modal('hide');
+     });
 }
 
 /**
  * 修改点击提交
  */
 function submitEditUser(){
-	alert(2222);
-//	debugger;
 	// 提交变更后，清空表单
-	$("#main").on("click","#submitEditUser", function () { 
-    	alert(1111);
-        $.ajax({ 
-             url: "/user/addUserForm", 
-             type: 'post',
-             data:$('#editUserForm').serialize(),
-             success: function(data){
-            	 alert(111111);
-                 $('#editUserForm')[0].reset();  
-                 if (data.success) {
-                     // 从新刷新主界面
-                     getUersByName(0, _pageSize);
-                 } else {
-                     toastr.error(data.message);
-                 }
-
-             },
-             error : function() {
-                 toastr.error("error!");
-             }
-         });
-    });
-}
-
-//// 分页
-//$.tbpage("#mainContainer", function (pageIndex, pageSize) {
-//    getUersByName(pageIndex, pageSize);
-//    _pageSize = pageSize;
-//});
-
-
-
-
-/**
- * 点击提交
- * @returns
- */
-
-
-// 删除用户
-$("#rightContainer").on("click",".blog-delete-user", function () { 
-
-	// 获取 CSRF Token 
-    var csrfToken = $("meta[name='_csrf']").attr("content");
-    var csrfHeader = $("meta[name='_csrf_header']").attr("content");
-    
     $.ajax({ 
-         url: "/users/" + $(this).attr("userId") , 
-         type: 'DELETE', 
-         beforeSend: function(request) {
-//             request.setRequestHeader(csrfHeader, csrfToken); // 添加  CSRF Token 
-         },
+         url: "/user/addUserForm", 
+         type: 'POST',
+         data:$('#editUserForm').serialize(),
          success: function(data){
-             if (data.success) {
-                 // 从新刷新主界面
-                 getUersByName(0, _pageSize);
+             if (data.result) {
+            	 //刷新页面
+            	 getUserList();
              } else {
                  toastr.error(data.message);
              }
+             //关闭模态框
+             $('#addUser').modal('hide');
          },
          error : function() {
              toastr.error("error!");
          }
-     });
-});
-//
-//if (window.confirm("此操作不可逆，是否确认？")) {
-//    $.ajax({
-//        type: "POST",
-//        url: "/User/delete",
-//        data: "id=" + id,
-//        cache: false, //不缓存此页面   
-//        success: function (data) {
-//            window.location.reload();
-//        }
-//    });
-//}
-//
-//        
+    });
+}

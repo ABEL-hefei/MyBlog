@@ -1,6 +1,6 @@
   <div class="modal-dialog" role="document" style="max-width:450px;">
     <!-- <form id="addUserForm" action="/user/add" th:action="@{~/user/addUserForm}" th:object="${userModel.user}" method="post" autocomplete="off" draggable="false"> -->
-    <form id="addUserForm" action="/user/add" th:action="@{~/user/addUserForm}" th:object="${userModel.user}" method="post" autocomplete="off" draggable="false">
+    <form id="addUserForm" th:object="${userModel.user}" method="post" autocomplete="off" draggable="false">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -44,7 +44,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-          <button type="submit" class="btn btn-primary" id="submitAddUser">提交</button>
+          <a class="btn btn-primary" id="submitAndUser" >提交</a>
         </div>
       </div>
     </form>

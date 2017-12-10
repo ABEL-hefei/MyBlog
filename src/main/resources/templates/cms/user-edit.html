@@ -1,5 +1,4 @@
   <div class="modal-dialog" role="document" style="max-width:450px;">
-    <!-- <form action="/user/add" th:action="@{~/user/addUserForm}" th:object="${userModel.user}" method="post" autocomplete="off" draggable="false"> -->
     <form id="editUserForm" th:object="${userModel.user}" autocomplete="off" draggable="false">
       <div class="modal-content">
         <div class="modal-header">
@@ -43,8 +42,8 @@
           </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" id="fds">取消</button>
-          <a type="button" class="btn btn-primary" id="aaa" >提交</a>
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <a class="btn btn-primary" id="submitEditUser" >提交</a>
         </div>
       </div>
     </form>

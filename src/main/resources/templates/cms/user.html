@@ -26,7 +26,7 @@
         <td th:text="${user.articleSize}">4</td>
         <td th:text="${user.lastLoginTime}">2015-12-03 15:14:27</td>
         <td>
-        	<a id="editUser" th:attr="userId=${user.id}" data-toggle="modal" data-target="#addUser">修改</a> 
+        	<a id="editUser"  th:attr="userId=${user.id}" data-toggle="modal" data-target="#addUser">修改</a> 
         	<a id="deleteUser" th:attr="userId=${user.id}">删除</a> 
         	<a id="forbiddenUser" th:attr="userId=${user.id}">禁用</a></td>
       </tr>
